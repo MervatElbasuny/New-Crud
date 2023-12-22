@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+:root{
+    --bg-color: #EADED7;
+    --primary-color:#954619;
+    --primary-font:"Lobster";
+    --bg-color:rgb(218, 203, 177);
+    --text-shadow:1px 1px 0px #9f7c67;
+}
+
+/* ***************start header************** */
+header{
+    background-color: #432f23;
+    min-height: 100vh;
+}
+h4{
+    font-family: var(--primary-font);
+}
+
+/* ************start title************* */
+.title{
+    min-height: 25vh;
+}
+.title-left {
+    width: 69px;
+    height: 63px;
+    background: url(../img/page_title_left.png) 0 0 no-repeat;
+    left: -30px;
+}
+
+.title-center{
+    height: 53px;
+    background: url(../img/page_title_px.png) 0 0 repeat-x;
+    left: 39px;
+    right: 39px;
+    font-family: 'Droid Serif';
+    line-height: 53px;
+    color: #ebe5e1;
+    text-shadow: var(--text-shadow);
+}
+
+.title-right {
+    width: 69px;
+    height: 63px;
+    background: url(../img/page_title_right.png) 0 0 no-repeat;
+    right: -29px;
+}
+@media screen and (max-width :1200px) {
+    .title-center{
+        font-size: 25px !important;
+        z-index: 1;
+    }
+    .title-left{
+        left: -3px;
+    }
+    .title-right{
+        right: -3px;
+    }
+    
+}
+/* *************End title************ */
+
+/* start *******secondary-title****** */
+.secondary-title{
+    color: #ebe5e1;
+    text-shadow: var(--text-shadow);
+}
+.secondary-title i{
+    font-size: 25px;
+}
+/* End secondary-title */
+
+/* *************start form********** */
+label{
+    color: var(--primary-color);
+    text-shadow: 1px 1px 0px #9f7c67; 
+}
+/* ************button*********** */
+.box {
+    width: 130px;
+    height: 50px;
+    overflow: hidden;
+    background-color: rgb(218, 203, 177);
+    border-top-left-radius: 20px;
+    cursor: pointer;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 10px rgb(104, 134, 218);
+  } 
+  
+   .box::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 200px;
+    margin-top: -92px;
+    background: linear-gradient(#00ccff,#d400d4);
+    animation: amm 4s linear infinite;
+  } 
+
+
+  @keyframes amm {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .text-button {
+    z-index: 1;
+    color: var(--primary-color);
+    font-family: "Lobster";
+
+  }
+  
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background-color: rgb(218, 203, 177);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  } 
+/* ************End bu********tton */
+
+/* ***********start table******** */
+.table {
+    font-family: "Outfit";
+    color: #954619 !important;
+}
+thead{
+    font-family: 'Droid Serif';
+    background-color: var(--bg-color)
+}
+tr{
+    vertical-align: middle;
+    font-weight: 700;
+}
+tr:hover{
+    background-color: var(--bg-color);
+    cursor: pointer;
+}
+/* ***********End table********** */
+
+
+/* ****************start search input**************** */
+.input-container {
+    z-index: 1;
+}
+  
+.input {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 18px 16px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+  
+.input::placeholder {
+    color: transparent;
+}
+
+.input:focus::placeholder {
+    color: rgb(131, 128, 128);
+}
+  
+.input:focus,.input:not(:placeholder-shown) {
+    background-color: #fff;
+    border: 1px solid rgb(98, 0, 255);
+    width: 290px;
+    cursor: none;
+    padding: 18px 16px 18px 40px;
+}
+
+.icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: -1;
+    fill: rgb(163 94 39);
+    border: 1px solid rgb(98, 0, 255);
+}
+
+.input:hover + .icon {
+    transform: rotate(360deg);
+    transition: .2s ease-in-out;
+}
+  
+.input:focus + .icon,.input:not(:placeholder-shown) + .icon {
+    z-index: 0;
+    background-color: transparent;
+    border: none;
+}
+/*  **************End search input***************** */
+
+ 
+/* **************start delete button**************  */
+.bin-button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 89px;
+    height: 49px;
+    border-radius: 3px;
+    background-color: rgb(255, 95, 95);
+    cursor: pointer;
+    border: 2px solid rgb(255, 201, 201);
+    transition-duration: 0.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+
+}
+.bin-bottom {
+    width: 16px;
+    z-index: 2;
+}
+.bin-top {
+    width: 15px;
+    transform-origin: right;
+    transition-duration: 0.3s;
+    z-index: 2;
+}
+.bin-button:hover .bin-top {
+    transform: rotate(45deg);
+}
+.bin-button:hover {
+    background-color: rgb(255, 0, 0);
+}
+.bin-button:active {
+    transform: scale(0.9);
+}
+.garbage {
+    position: absolute;
+    width: 14px;
+    height: auto;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.bin-button:hover .garbage {
+    animation: throw 0.4s linear;
+}
+@keyframes throw {
+from {
+    transform: translate(-400%, -700%);
+    opacity: 0;
+}
+to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
+}
+/* **************End delete button**************  */
+
+
+ 
+/* **************start visit button**************  */
+.visit {
+    position: relative;
+    outline: 0;
+    border: 2px solid  rgb(192 205 129);
+    background-color: #9eb23b;
+    color: #ffffff;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.9rem 1rem;
+    border-radius: 3px;
+    /* width: 75px; */
+    /* height: 39px; */
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+}
+  
+.visit span {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all .4s ease;
+}
+
+.visit svg {
+    width: .7rem;
+    height: 1.25rem;
+}
+
+.visit span:nth-child(2),.visit span:nth-child(3) {
+    position: absolute;
+    top: 40px;
+    color: #fff;
+}
+
+.visit span:nth-child(2) {
+    background-color: #9eb23b;
+}
+
+.visit span:nth-child(3) {
+    background-color: #9eb23b;
+}
+  
+.visit:hover {
+    box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+}
+
+.visit:hover span:nth-child(2), .visit:focus span:nth-child(3) {
+    top: 0;
+}
+
+.visit:focus {
+    box-shadow: none;
+}
+
+
+@media screen and (max-width :786px) {
+    .visit{
+        padding:  0.8rem 0.3rem
+
+    }
+    .bin-button{
+        width: 67px;
+        height: 48px
+    }
+    tr{
+        font-weight: 300;
+    }
+    thead{
+        font-size: 12px;
+    }
+}
+/* **************End visit button**************  */ 
